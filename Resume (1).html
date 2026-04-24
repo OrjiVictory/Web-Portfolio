@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Victory Orji</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb; color: #111827;
+      padding-top: 60px;
+      opacity: 0; animation: fadeIn 0.6s ease forwards;
+    }
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: #fff; border-bottom: 1px solid #e5e7eb;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem; height: 60px; z-index: 100;
+    }
+    .nav-logo { font-weight: 600; font-size: 1.1rem; color: #111827; text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { font-size: 0.9rem; color: #6b7280; text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #111827; }
+
+    main { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+
+    .card {
+      background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
+      padding: 1.5rem; margin-bottom: 1rem;
+      opacity: 0; transform: translateY(10px); animation: up 0.4s ease forwards;
+    }
+    @keyframes up { to { opacity: 1; transform: none; } }
+
+    .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+    .name { font-size: 1.4rem; font-weight: 600; }
+    .role { font-size: 0.9rem; color: #6b7280; margin-top: 0.2rem; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; }
+    .meta a { color: #2563eb; text-decoration: none; }
+    .badge {
+      font-size: 0.72rem; font-weight: 500; color: #2563eb;
+      background: #eff6ff; border: 1px solid #bfdbfe;
+      border-radius: 100px; padding: 0.25rem 0.75rem; white-space: nowrap;
+    }
+    .summary { font-size: 0.9rem; line-height: 1.7; color: #6b7280; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f3f4f6; }
+
+    .section-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #2563eb; margin-bottom: 1rem; }
+
+    .tl-item { padding-left: 1rem; border-left: 2px solid #e5e7eb; margin-bottom: 1.25rem; }
+    .tl-item:last-child { margin-bottom: 0; }
+    .tl-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+    .tl-title { font-size: 0.95rem; font-weight: 600; }
+    .tl-org { font-size: 0.85rem; color: #6b7280; margin-top: 0.1rem; }
+    .tl-date { font-size: 0.75rem; color: #6b7280; white-space: nowrap; flex-shrink: 0; }
+    .tl-note { font-size: 0.8rem; color: #2563eb; margin-top: 0.15rem; }
+    ul.tl-bullets { padding-left: 1.1rem; margin-top: 0.5rem; font-size: 0.875rem; color: #6b7280; line-height: 1.7; }
+
+    .skills-flex { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .chip { font-size: 0.82rem; color: #374151; background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 6px; padding: 0.3rem 0.75rem; }
+
+    .actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.55rem 1.2rem; border-radius: 8px; font-size: 0.875rem;
+      font-weight: 500; font-family: inherit; cursor: pointer; transition: all 0.2s;
+      border: 1px solid transparent; text-decoration: none;
+    }
+    .btn-outline { background: #fff; color: #374151; border-color: #d1d5db; }
+    .btn-outline:hover { border-color: #9ca3af; }
+    .btn-primary { background: #2563eb; color: #fff; }
+    .btn-primary:hover { background: #1d4ed8; }
+
+    @media print {
+      nav, .actions { display: none; }
+      body { background: #fff; padding-top: 0; }
+    }
+    @media (max-width: 600px) {
+      nav { padding: 0 1.2rem; }
+      main { padding: 1.5rem 1rem 3rem; }
+      .card-header, .tl-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index (1).html">VO</a>
+  <div class="nav-links">
+    <a href="index (1).html">About Me</a>
+    <a href="Resume (1).html" class="active">Resume</a>
+    <a href="index (1).html#contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+
+  <div class="card" style="animation-delay:0.05s">
+    <div class="card-header">
+      <div>
+        <div class="name">Victory Orji</div>
+        <div class="role">Web Developer · Computer Science Student</div>
+        <div class="meta">
+          <span>📍 Atlanta, GA</span>
+          <span>orjivictory5@gmail.com</span>
+          <a href="https://www.linkedin.com/in/orji-victory-6a76bb265" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <span class="badge">Open to internship &amp; full-time</span>
+    </div>
+    <p class="summary">Aspiring Cybersecurity/IT professional and Computer Science student with hands-on experience in web development, 
+Python, Linux, and penetration testing fundamentals. Seeking an internship to apply technical knowledge and gain real-world 
+experience in security analysis, network defense, or IT operations.</p>
+  </div>
+
+  <div class="card" style="animation-delay:0.12s">
+    <div class="section-title">Work Experience</div>
+    <div class="tl-item">
+      <div class="tl-row">
+        <div>
+          <div class="tl-title">Web Developer</div>
+          <div class="tl-org">HIIT PLC · Lagos, NG</div>
+        </div>
+        <div class="tl-date">2019 – 2020</div>
+      </div>
+      <ul class="tl-bullets">
+        <li>Designed and implemented responsive websites using HTML, CSS, and JavaScript.</li>
+        <li>Collaborated with team members to deliver client-focused solutions.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" style="animation-delay:0.19s">
+    <div class="section-title">Education</div>
+    <div class="tl-item">
+      <div class="tl-row">
+        <div>
+          <div class="tl-title">B.S. Cybersecurity</div>
+          <div class="tl-org">Kennesaw State University · Kennesaw, GA</div>
+        </div>
+        <div class="tl-date">2025 – Present</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-row">
+        <div>
+          <div class="tl-title">A.S. Computer Science</div>
+          <div class="tl-org">Georgia Highlands College · Rome, GA</div>
+          <div class="tl-note">Dean's List · GPA 3.6</div>
+        </div>
+        <div class="tl-date">2023 – 2025</div>
+      </div>
+      <ul class="tl-bullets">
+        <li>Relevant coursework: Java</li>
+        <li>Projects: Pet Sims (Java virtual pet simulator), Music Player (Java)</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+        <div class="tl-header">
+          <div>
+            <div class="tl-title">National Diploma in Electrical/Electronics Engineering</div>
+            <div class="tl-org">Yaba College of Technology · Lagos, NG</div>
+          </div>
+          <span class="tl-date">2020 – 2022</span>
+        </div>
+      </div>
+  </div>
+
+  <div class="card" style="animation-delay:0.26s">
+    <div class="section-title">Skills</div>
+    <div class="skills-flex">
+      <span class="chip">HTML / CSS</span>
+      <span class="chip">Bootstrap</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">Java</span>
+      <span class="chip">Python</span>
+      <span class="chip">Linux</span>
+      <span class="chip">MongoDB</span>
+      <span class="chip">Splunk (in progress)</span>
+      <span class="chip">SQL</span>
+      <span class="chip">MS Word</span>
+      <span class="chip">MS PowerPoint</span>
+      <span class="chip">MS Excel</span>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-outline" onclick="window.print()">🖨 Print / Save PDF</button>
+    <button class="btn btn-primary" id="dlBtn">⬇ Download HTML</button>
+  </div>
+
+</main>
+
+<script>
+  document.getElementById('dlBtn').addEventListener('click', () => {
+    const blob = new Blob(['<!doctype html>\n' + document.documentElement.outerHTML], { type: 'text/html' });
+    const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'Victory_Orji_Resume.html' });
+    document.body.appendChild(a); a.click();
+    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  });
+</script>
+</body>
+</html>
