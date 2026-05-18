@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  // Allow requests from your own site only
+  // Allow requests from site only
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
 
