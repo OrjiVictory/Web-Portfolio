@@ -62,8 +62,12 @@ experience in security analysis, network defense, or IT operations.
       <span class="skill-chip">Python</span>
       <span class="skill-chip">Linux</span>
       <span class="skill-chip">MongoDB</span>
-      <span class="skill-chip">Splunk (in progress)</span>
+      <span class="skill-chip">Splunk</span>
       <span class="skill-chip">SQL</span>
+      <span class="skill-chip">Active Directory</span>
+      <span class="skill-chip">Virtualization</span>
+      <span class="skill-chip">User and Group Management</span>
+      <span class="skill-chip">API</span>
       <span class="skill-chip">MS Word</span>
       <span class="skill-chip">MS PowerPoint</span>
       <span class="skill-chip">MS Excel</span>
@@ -180,20 +184,108 @@ experience in security analysis, network defense, or IT operations.
       const icon = OWM_ICON_MAP[data.icon] ?? '🌡️';
  
       widget.innerHTML = `
-      <div style=" margin: 10px;>
-        <div class="weather-loc"><i class="fa-solid fa-location-dot" style="width:12px;color:red"></i>Atlanta, GA</div>
-        <span class="weather-icon" style="width: 15%;">${icon}</span>
-        <div class="weather-info">
-          <div class="weather-temp">${data.temp}°F <span style="font-size:0.75rem;font-weight:400;color:var(--muted)">feels ${data.feels_like}°</span></div>
-          <div class="weather-desc">${data.description}</div>
-          
+      <div style="
+    margin:10px;
+    padding:18px;
+    border-radius:16px;
+    background:linear-gradient(135deg,#1e293b,#334155);
+    color:white;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    font-family:Arial,sans-serif;
+">
+
+    <div class="weather-loc" style="
+        display:flex;
+        align-items:center;
+        gap:6px;
+        font-size:0.9rem;
+        color:#cbd5e1;
+        margin-bottom:12px;
+    ">
+        <i class="fa-solid fa-location-dot" style="color:#ef4444"></i>
+        Atlanta, GA
+    </div>
+
+    <div style="
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        margin-bottom:16px;
+    ">
+
+        <span class="weather-icon" style="
+            font-size:3rem;
+        ">
+            ${icon}
+        </span>
+
+        <div class="weather-info" style="text-align:right;">
+            <div class="weather-temp" style="
+                font-size:2rem;
+                font-weight:700;
+                line-height:1;
+            ">
+                ${data.temp}°F
+            </div>
+
+            <div style="
+                font-size:0.85rem;
+                color:#cbd5e1;
+                margin-top:4px;
+            ">
+                Feels like ${data.feels_like}°
+            </div>
+
+            <div class="weather-desc" style="
+                margin-top:8px;
+                text-transform:capitalize;
+                font-size:1rem;
+                color:#f8fafc;
+            ">
+                ${data.description}
+            </div>
         </div>
-        <div class="weather-divider"></div>
-        <div class="weather-extra">
-          <span style="padding:5px"><i class="fa-solid fa-droplet" style="width:12px;color:#60a5fa"></i> ${data.humidity}% humidity</span>
-          <span style="padding:5px"><i class="fa-solid fa-wind" style="width:12px;color:#60a5fa"></i> ${data.wind_speed} mph wind</span>
-        </div>
-      </div>
+    </div>
+
+    <div style="
+        height:1px;
+        background:rgba(255,255,255,0.15);
+        margin:12px 0;
+    "></div>
+
+    <div class="weather-extra" style="
+        display:flex;
+        justify-content:space-between;
+        gap:12px;
+        flex-wrap:wrap;
+    ">
+
+        <span style="
+            display:flex;
+            align-items:center;
+            gap:6px;
+            background:rgba(255,255,255,0.08);
+            padding:8px 12px;
+            border-radius:10px;
+        ">
+            <i class="fa-solid fa-droplet" style="color:#60a5fa"></i>
+            ${data.humidity}% humidity
+        </span>
+
+        <span style="
+            display:flex;
+            align-items:center;
+            gap:6px;
+            background:rgba(255,255,255,0.08);
+            padding:8px 12px;
+            border-radius:10px;
+        ">
+            <i class="fa-solid fa-wind" style="color:#93c5fd"></i>
+            ${data.wind_speed} mph wind
+        </span>
+
+    </div>
+</div>
       `;
     } catch (err) {
       widget.innerHTML = '<span class="weather-error"><i class="fa-solid fa-triangle-exclamation"></i> Weather unavailable</span>';
